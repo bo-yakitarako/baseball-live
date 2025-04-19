@@ -1,3 +1,5 @@
+import { storage } from './utils/localStorage';
+
 const TICK = 50;
 
 (async () => {
@@ -29,5 +31,5 @@ const TICK = 50;
     dom.section.style.setProperty('display', style);
     window.scrollTo(0, 0);
   };
-  toggleDelete(true);
+  toggleDelete(storage.isDelete);
 })();
