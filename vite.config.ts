@@ -8,7 +8,7 @@ export default defineConfig({
     minify: 'esbuild',
     rollupOptions: {
       input: {
-        main: 'src/main.ts',
+        main: 'src/main.tsx',
       },
       output: {
         entryFileNames: 'content.js',

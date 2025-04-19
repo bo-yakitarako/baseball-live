@@ -1,4 +1,7 @@
+import React from 'react';
+import { createRoot } from 'react-dom/client';
 import { storage } from './utils/localStorage';
+import { App } from './components/App';
 
 const TICK = 50;
 
@@ -32,4 +35,7 @@ const TICK = 50;
     window.scrollTo(0, 0);
   };
   toggleDelete(storage.isDelete);
+  const title = dom.title.innerText;
+  const root = createRoot(dom.title);
+  root.render(<App title={title} toggleDelete={toggleDelete} />);
 })();
