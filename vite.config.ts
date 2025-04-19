@@ -20,6 +20,12 @@ export default defineConfig({
           hook: 'writeBundle',
         }),
       ],
+      onwarn(warning, warn) {
+        if (warning.code === 'MODULE_LEVEL_DIRECTIVE') {
+          return;
+        }
+        warn(warning);
+      },
     },
   },
 });
