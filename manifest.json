@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "ベースボールLIVE消す",
+  "version": "1.0.0",
+  "description": "殺しますよ",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://baseball.mb.softbank.jp/watch/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
